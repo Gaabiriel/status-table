@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var status_table_directive_1 = require("./status.table.directive");
 var StatusTableComponent = /** @class */ (function () {
     function StatusTableComponent() {
     }
@@ -21,6 +22,7 @@ var StatusTableComponent = /** @class */ (function () {
     ], StatusTableComponent.prototype, "rowData", void 0);
     StatusTableComponent = __decorate([
         core_1.Component({
+            entryComponents: [status_table_directive_1.StatusTableDirective],
             template: "\n    <div class=\"m-badge \" status type=\"{{value}}\">{{renderValue}}</div>\n  ",
         })
     ], StatusTableComponent);
