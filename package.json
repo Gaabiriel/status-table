@@ -1,6 +1,6 @@
 {
   "name": "status-table",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A node.js component that changes the row's color when value is true or false",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
