@@ -7,7 +7,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var status_table_directive_1 = require("./status.table.directive");
 var StatusTableComponent = /** @class */ (function () {
     function StatusTableComponent() {
     }
@@ -22,10 +21,33 @@ var StatusTableComponent = /** @class */ (function () {
     ], StatusTableComponent.prototype, "rowData", void 0);
     StatusTableComponent = __decorate([
         core_1.Component({
-            entryComponents: [status_table_directive_1.StatusTableDirective],
             template: "\n    <div class=\"m-badge \" status type=\"{{value}}\">{{renderValue}}</div>\n  ",
         })
     ], StatusTableComponent);
     return StatusTableComponent;
 }());
 exports.StatusTableComponent = StatusTableComponent;
+var StatusTableDirective = /** @class */ (function () {
+    function StatusTableDirective(el, renderer) {
+        this.el = el;
+        this.renderer = renderer;
+    }
+    StatusTableDirective.prototype.ngOnInit = function () {
+        if (this.type == 'true') {
+            this.renderer.setElementClass(this.el.nativeElement, 'm-badge--success', true);
+        }
+        else {
+            this.renderer.setElementClass(this.el.nativeElement, 'm-badge--danger', true);
+        }
+    };
+    __decorate([
+        core_1.Input('type')
+    ], StatusTableDirective.prototype, "type", void 0);
+    StatusTableDirective = __decorate([
+        core_1.Directive({
+            selector: '[status]'
+        })
+    ], StatusTableDirective);
+    return StatusTableDirective;
+}());
+exports.StatusTableDirective = StatusTableDirective;
