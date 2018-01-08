@@ -12,6 +12,12 @@ var StatusTableComponent = /** @class */ (function () {
     }
     StatusTableComponent.prototype.ngOnInit = function () {
         this.renderValue = this.value ? 'Ativo' : 'Inativo';
+        if (this.value) {
+            this.statusBadge = 'm-badge--success';
+        }
+        else {
+            this.statusBadge = 'm-badge--danger';
+        }
     };
     __decorate([
         core_1.Input()
@@ -21,33 +27,9 @@ var StatusTableComponent = /** @class */ (function () {
     ], StatusTableComponent.prototype, "rowData", void 0);
     StatusTableComponent = __decorate([
         core_1.Component({
-            template: "\n    <div class=\"m-badge \" status type=\"{{value}}\">{{renderValue}}</div>\n  ",
+            template: "\n    <div class=\"m-badge {{statusBadge}}\">{{renderValue}}</div>\n  ",
         })
     ], StatusTableComponent);
     return StatusTableComponent;
 }());
 exports.StatusTableComponent = StatusTableComponent;
-var StatusTableDirective = /** @class */ (function () {
-    function StatusTableDirective(el, renderer) {
-        this.el = el;
-        this.renderer = renderer;
-    }
-    StatusTableDirective.prototype.ngOnInit = function () {
-        if (this.type == 'true') {
-            this.renderer.setElementClass(this.el.nativeElement, 'm-badge--success', true);
-        }
-        else {
-            this.renderer.setElementClass(this.el.nativeElement, 'm-badge--danger', true);
-        }
-    };
-    __decorate([
-        core_1.Input('type')
-    ], StatusTableDirective.prototype, "type", void 0);
-    StatusTableDirective = __decorate([
-        core_1.Directive({
-            selector: '[status]'
-        })
-    ], StatusTableDirective);
-    return StatusTableDirective;
-}());
-exports.StatusTableDirective = StatusTableDirective;
