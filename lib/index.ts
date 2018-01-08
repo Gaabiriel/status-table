@@ -4,7 +4,7 @@ import { ViewCell } from 'ng2-smart-table';
 
 @Component({
   template: `
-    <div class="m-badge {{statusBadge}}" status type="{{value}}">{{renderValue}}</div>
+    <div class="m-badge {{statusBadge}}">{{renderValue}}</div>
   `,
 })
 export class StatusTableComponent implements ViewCell, OnInit {
