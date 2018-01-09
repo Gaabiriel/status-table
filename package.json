@@ -1,9 +1,10 @@
 {
   "name": "status-table",
-  "version": "1.0.14",
+  "version": "1.0.13",
   "description": "A node.js component that changes the row's color when value is true or false",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "typings": "src/index",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
