@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { OnInit } from '@angular/core';
 import { ViewCell } from 'ng2-smart-table';
 export declare class StatusTableComponent implements ViewCell, OnInit {
