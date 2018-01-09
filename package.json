@@ -1,10 +1,9 @@
 {
   "name": "status-table",
-  "version": "1.0.15",
+  "version": "1.0.13",
   "description": "A node.js component that changes the row's color when value is true or false",
   "main": "dist/status-table.js",
-  "types": "src/status-table.d.ts",
-  "typings": "src/status-table",
+  "types": "dist/status-table.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,10 +20,13 @@
   },
   "homepage": "https://github.com/Gaabiriel/status-table#readme",
   "devDependencies": {
-    "typescript": "^2.6.2"
+    "@angular/cli": "1.5.0",
+    "@angular/compiler-cli": "^5.0.0",
+    "@angular/language-service": "^5.0.0",
+    "typescript": "~2.4.2"
   },
   "dependencies": {
-    "@angular/core": "^5.1.3",
-    "ng2-smart-table": "^1.2.2"
+    "@angular/common": "^5.0.0",
+    "ng2-smart-table": "1.1.0"
   }
 }

@@ -8,8 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 require("reflect-metadata");
 var core_1 = require("@angular/core");
-import { Component, Input, OnInit, Directive, Renderer, ElementRef } from '@angular/core';
-import { ViewCell } from 'ng2-smart-table';
 var StatusTableComponent = /** @class */ (function () {
     function StatusTableComponent() {
     }
