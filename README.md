@@ -1,7 +1,7 @@
 [![npm version](https://badge.fury.io/js/status-table.svg)](https://badge.fury.io/js/status-table)
 
 # status-table
-A node.js component that changes the row's color when value is true or false
+A node.js module that changes the row's color when value is true or false
 
 ## Installation 
 ```sh
@@ -12,17 +12,14 @@ npm install status-table --save
 #### SharedComponent
 
 ```typescript
-import { StatusTableComponent } from 'status-table';
+import { StatusTableModule } from 'status-table';
 
-  declarations: [
-    StatusTableComponent
+ imports: [
+     StatusTableModule
   ],
   exports: [
-    StatusTableComponent
-  ], 
-  entryComponents: [
-    StatusTableComponent
-  ],
+    StatusTableModule
+  ]
  ```
  
 #### ExampleComponent
