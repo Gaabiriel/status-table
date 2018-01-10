@@ -1,18 +1,15 @@
 import { Component, Input, OnInit, Directive, Renderer, ElementRef } from '@angular/core';
-import { ViewCell } from 'ng2-smart-table';
 
-
+const template = ' <div class="m-badge {{statusBadge}}">{{renderValue}}</div>';
 @Component({
   selector: 'status-table',
   styleUrls: [
-    
+
   ],
-  template: `
-    <div class="m-badge {{statusBadge}}">{{renderValue}}</div>
-  `,
+  template: template,
 })
 
-export class StatusTableComponent implements ViewCell, OnInit {
+export class StatusTableComponent implements OnInit {
 
   renderValue: string;
   directiveValue: boolean;
